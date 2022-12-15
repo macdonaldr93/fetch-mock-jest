@@ -1,6 +1,6 @@
 {
   "name": "@bloombug/fetch-mock-jest",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Jest wrapper for fetch-mock, a comprehensive stub for fetch",
   "author": "Ryan Macdonald",
   "license": "MIT",
