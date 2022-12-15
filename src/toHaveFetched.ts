@@ -6,7 +6,6 @@ declare global {
   namespace jest {
     interface Matchers<R> {
       toHaveFetched(
-        fetchMock: FetchMockStatic,
         filter: fetchMock.InspectionFilter,
         options: fetchMock.MockOptions
       ): R;
@@ -54,5 +53,8 @@ export function toHaveFetched(
 }
 
 expect.extend({
-  toHaveFetched,
+  toHaveFetched: (
+    filter: fetchMock.InspectionFilter,
+    options: fetchMock.MockOptions
+  ) => toHaveFetched(fetchMock, filter, options),
 });
