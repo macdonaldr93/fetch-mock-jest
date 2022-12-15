@@ -1,8 +1,12 @@
 {
+  "name": "fetch-mock-jest",
   "version": "0.1.0",
+  "description": "Jest wrapper for fetch-mock, a comprehensive stub for fetch",
+  "author": "Ryan Macdonald",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "module": "dist/fetch-mock-jest.esm.js",
   "files": [
     "dist",
     "src"
@@ -19,7 +23,28 @@
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "node-fetch": "*"
+  },
+  "peerDependenciesMeta": {
+    "node-fetch": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.1.0",
+    "@types/node-fetch": "^2.6.2",
+    "husky": "^8.0.2",
+    "node-fetch": "^2.6.7",
+    "size-limit": "^8.1.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "fetch-mock": "^9.11.0",
+    "jest-diff": "^29.3.1"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -31,9 +56,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "fetch-mock-jest",
-  "author": "Ryan Macdonald",
-  "module": "dist/fetch-mock-jest.esm.js",
   "size-limit": [
     {
       "path": "dist/fetch-mock-jest.cjs.production.min.js",
@@ -44,12 +66,12 @@
       "limit": "10 KB"
     }
   ],
-  "devDependencies": {
-    "@size-limit/preset-small-lib": "8.1.0",
-    "husky": "8.0.2",
-    "size-limit": "8.1.0",
-    "tsdx": "0.14.1",
-    "tslib": "2.4.1",
-    "typescript": "4.9.3"
-  }
+  "keywords": [
+    "fetch",
+    "http",
+    "mock",
+    "testing",
+    "spy",
+    "jest"
+  ]
 }
